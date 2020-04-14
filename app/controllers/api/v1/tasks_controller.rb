@@ -1,8 +1,8 @@
 class Api::V1::TasksController < ApplicationController
 
   def index
-    @tasks = Task.where(confirmed: true)
-    render json: @tasks
+    tasks = Task.where(confirmed: true)
+    render json: tasks
   end
 
   def create
